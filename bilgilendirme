@@ -1,0 +1,97 @@
+# E-Ticaret Satış Analizi ve Müşteri Segmentasyonu
+
+## Proje Hakkında
+
+Bu projede, bir e-ticaret işletmesine ait satış verileri kullanılarak satış performansı, müşteri davranışları ve alışveriş eğilimleri analiz edilmiştir.
+
+Proje kapsamında veri temizleme, keşifsel veri analizi (EDA), satış analizi, RFM yöntemi ile müşteri segmentasyonu ve veri görselleştirme çalışmaları yapılmıştır.
+
+Projenin temel amacı, ham verileri analiz ederek anlamlı sonuçlar elde etmek ve bu sonuçları grafikler yardımıyla anlaşılır hale getirmektir.
+
+## Kullanılan Veri Seti
+
+Projede 2010-2011 yılları arasındaki satış işlemlerini içeren **Online Retail Dataset** kullanılmıştır.
+
+Veri setinde bulunan başlıca sütunlar:
+- InvoiceNo (Fatura Numarası)
+- StockCode (Ürün Kodu)
+- Description (Ürün Açıklaması)
+- Quantity (Ürün Miktarı)
+- InvoiceDate (Fatura Tarihi)
+- UnitPrice (Birim Fiyat)
+- CustomerID (Müşteri Numarası)
+- Country (Ülke)
+
+## Proje Aşamaları
+
+### 1. Veri Temizleme
+- Tekrarlanan satırlar temizlendi.
+- Eksik CustomerID ve Description değerleri kaldırıldı.
+- İptal edilen siparişler veri setinden çıkarıldı.
+- Negatif ve sıfır miktar/fiyat değerleri temizlendi.
+- Veri tipleri düzenlendi.
+- TotalPrice, YearMonth, Hour ve DayOfWeek gibi yeni sütunlar oluşturuldu.
+
+### 2. Keşifsel Veri Analizi (EDA)
+- Toplam ciro ve sipariş sayısı hesaplandı.
+- Toplam müşteri ve ürün sayıları incelendi.
+- En çok ciro getiren ilk 10 ülke belirlendi.
+- En çok gelir getiren ilk 10 ürün analiz edildi.
+- Aylık ciro ve sipariş değişimleri incelendi.
+
+### 3. RFM Müşteri Segmentasyonu
+
+Müşterilerin alışveriş davranışlarını incelemek amacıyla RFM analizi uygulandı.
+
+Analizde üç temel ölçüt kullanıldı:
+
+- **Recency:** Müşterinin son alışverişinden bu yana geçen süre.
+- **Frequency:** Müşterinin yaptığı toplam sipariş sayısı.
+- **Monetary:** Müşterinin toplam harcama tutarı.
+
+Bu ölçütler kullanılarak müşteriler farklı gruplara ayrıldı:
+
+- Şampiyonlar
+- Sadık Müşteriler
+- Potansiyel Sadıklar
+- Yeni Müşteriler
+- Risk Altındaki Müşteriler
+- Uyuyan Müşteriler
+
+### 4. Veri Görselleştirme
+
+Analiz sonuçlarını daha anlaşılır hale getirmek için Matplotlib ve Seaborn kütüphaneleri kullanıldı.
+
+Oluşturulan grafikler:
+- Aylık ciro değişimi.
+- En çok ciro getiren 10 ülke.
+- En çok gelir getiren 10 ürün.
+- Gün ve saat bazlı sipariş yoğunluğu ısı haritası.
+- RFM müşteri segmentasyonu grafiği.
+
+## Kullanılan Teknolojiler
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+## Proje Çıktıları
+
+Proje sonunda aşağıdaki sonuçlar elde edilmiştir:
+
+- Temizlenmiş veri seti.
+- Genel satış performansı ve iş metrikleri.
+- Ülke ve ürün bazlı satış analizleri.
+- Aylık satış ve sipariş analizleri.
+- RFM müşteri segmentasyon tablosu.
+- E-ticaret satış performans panosu.
+- Müşteri segmentasyonu grafiği.
+
+## Sonuç
+
+Bu proje ile Python kullanılarak veri temizleme, veri analizi, müşteri segmentasyonu ve veri görselleştirme konularında uygulamalı çalışmalar gerçekleştirilmiştir.
+
+Ham satış verilerinden yararlanılarak işletmenin satış performansı ve müşteri davranışları hakkında anlamlı bilgiler elde edilmiştir.
